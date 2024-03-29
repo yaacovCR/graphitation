@@ -16,7 +16,7 @@
     "just": "monorepo-scripts",
     "graphql17": "node ./scripts/install-graphql-17.js",
     "test17": "yarn graphql17 && yarn jest --config=../../scripts/config/jest.config.js --testMatch='**/*.graphql17.test.ts' --testPathIgnorePatterns='node_modules' --diagnostics=false",
-    "benchmark": "ts-node -T ./src/benchmarks/index.ts"
+    "benchmark": "node --require ts-node/register ./src/benchmarks/index.ts"
   },
   "devDependencies": {
     "@graphitation/cli": "*",
